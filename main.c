@@ -1,11 +1,9 @@
 #include "tm4c123gh6pm.h"
 
-int delay;
-
 
 int main()
 {
-	
+	int volatile delay;
 	SYSCTL_RCGCGPIO_R   = 	0x20U; 	// 0b 0000 0000 0000 0000 0000 0000 0010 0000 0x00000020 is equal to 0x20
 	GPIO_PORTF_DIR_R    = 	0x0EU;							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
 	GPIO_PORTF_DEN_R 		= 	0x0EU;							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
