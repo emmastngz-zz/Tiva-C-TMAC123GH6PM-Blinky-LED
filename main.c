@@ -1,5 +1,8 @@
 #include "tm4c123gh6pm.h"
 
+#define RED 		(1U<<1)
+#define BLUE 		(1U<<2)
+#define GREEN 	(1U<<3)
 
 int main()
 {
@@ -13,7 +16,7 @@ int main()
 	delay = 0;
 	while(delay < 1000000)
 	{
-		GPIO_PORTF_DATA_R  = 0X0CU; // color
+		GPIO_PORTF_DATA_R  = RED; // color
 		++delay;
 	}
 	
