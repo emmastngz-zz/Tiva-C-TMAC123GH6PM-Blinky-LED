@@ -5,7 +5,7 @@
 #define GREEN 	(1U<<3)
 
 /* Prototype function */
-void delay(void);
+void delay(int time);
 
 int main()
 {
@@ -17,9 +17,9 @@ int main()
 	while(1)
 	{
 	GPIO_PORTF_DATA_R |= BLUE; // Enable bits
-	delay();
+	delay(1000000);
 	GPIO_PORTF_DATA_R  &= (~BLUE); // Disable bits
-	delay();
+	delay(500000);
 	}
 
 	/*
@@ -34,13 +34,12 @@ int main()
 	*/
 }
 
-void delay(void)
+void delay(int time)
 {
 	int volatile delay;
 	delay = 0;
-	while(delay < 1000000)
+	while(delay < time)
 	{
-		
 		++delay;
 	}
 }
