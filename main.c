@@ -8,15 +8,16 @@ int main()
 {
 	int volatile delay;
 	SYSCTL_RCGCGPIO_R   = 	0x20U; 	// 0b 0000 0000 0000 0000 0000 0000 0010 0000 0x00000020 is equal to 0x20
-	GPIO_PORTF_DIR_R    = 	0x0EU;							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
-	GPIO_PORTF_DEN_R 		= 	0x0EU;							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
+	GPIO_PORTF_DIR_R    = 	(RED|BLUE|GREEN);							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
+	GPIO_PORTF_DEN_R 		= 	(RED|BLUE|GREEN);							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
+	GPIO_PORTF_DATA_R 	|= 	GREEN;
 	
 	while(1)
 	{
 	delay = 0;
 	while(delay < 1000000)
 	{
-		GPIO_PORTF_DATA_R  = RED; // color
+		GPIO_PORTF_DATA_R |= BLUE; // Enable bits
 		++delay;
 	}
 	
@@ -24,7 +25,7 @@ int main()
 	
 		while(delay < 1000000)
 	{
-		GPIO_PORTF_DATA_R  = 0x00U;
+		GPIO_PORTF_DATA_R  &= (~BLUE); // Disable bits
 		++delay;
 	}
 	}

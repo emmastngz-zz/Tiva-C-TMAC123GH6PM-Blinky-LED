@@ -246,8 +246,8 @@ Image Symbol Table
     .text                                    0x0000047e   Section        0  indicate_semi.o(.text)
     i.SystemInit                             0x00000480   Section        0  system_tm4c123.o(i.SystemInit)
     i.main                                   0x00000518   Section        0  main.o(i.main)
-    x$fpl$fpinit                             0x00000578   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x00000578   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x0000059c   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x0000059c   Number         0  fpinit.o(x$fpl$fpinit)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     HEAP                                     0x20000060   Section        0  startup_tm4c123.o(HEAP)
     STACK                                    0x20000060   Section      512  startup_tm4c123.o(STACK)
@@ -471,12 +471,12 @@ Image Symbol Table
     __use_no_semihosting_swi                 0x0000047d   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x0000047f   Thumb Code     0  indicate_semi.o(.text)
     SystemInit                               0x00000481   Thumb Code   112  system_tm4c123.o(i.SystemInit)
-    main                                     0x00000519   Thumb Code    78  main.o(i.main)
-    _fp_init                                 0x00000579   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x00000581   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x00000581   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x00000584   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000594   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00000519   Thumb Code   110  main.o(i.main)
+    _fp_init                                 0x0000059d   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x000005a5   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x000005a5   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x000005a8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000005b8   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
 
@@ -488,9 +488,9 @@ Memory Map of the image
 
   Image Entry point : 0x000002f1
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000594, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x000005b8, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x00000594, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x000005b8, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -551,10 +551,10 @@ Memory Map of the image
     0x0000047e   0x00000000   Code   RO          198    .text               c_w.l(indicate_semi.o)
     0x0000047e   0x00000002   PAD
     0x00000480   0x00000098   Code   RO           33    i.SystemInit        system_tm4c123.o
-    0x00000518   0x00000060   Code   RO            1    i.main              main.o
-    0x00000578   0x0000000a   Code   RO          183    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x00000582   0x00000002   PAD
-    0x00000584   0x00000010   Data   RO          251    Region$$Table       anon$$obj.o
+    0x00000518   0x00000084   Code   RO            1    i.main              main.o
+    0x0000059c   0x0000000a   Code   RO          183    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x000005a6   0x00000002   PAD
+    0x000005a8   0x00000010   Data   RO          251    Region$$Table       anon$$obj.o
 
 
     Execution Region ER_RW (Base: 0x20000000, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
@@ -578,12 +578,12 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        96         18          0          0          0       5083   main.o
+       132         22          0          0          0       5087   main.o
        276         24        620          0        512       5524   startup_tm4c123.o
        152         40          0          0          0        637   system_tm4c123.o
 
     ----------------------------------------------------------------------
-       524         82        636          0        512      11244   Object Totals
+       560         86        636          0        512      11248   Object Totals
          0          0         16          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -633,15 +633,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       792         98        636          0        608      11720   Grand Totals
-       792         98        636          0        608      11720   ELF Image Totals
-       792         98        636          0          0          0   ROM Totals
+       828        102        636          0        608      11724   Grand Totals
+       828        102        636          0        608      11724   ELF Image Totals
+       828        102        636          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1428 (   1.39kB)
+    Total RO  Size (Code + RO Data)                 1464 (   1.43kB)
     Total RW  Size (RW Data + ZI Data)               608 (   0.59kB)
-    Total ROM Size (Code + RO Data + RW Data)       1428 (   1.39kB)
+    Total ROM Size (Code + RO Data + RW Data)       1464 (   1.43kB)
 
 ==============================================================================
 
