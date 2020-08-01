@@ -1,11 +1,8 @@
 #include "tm4c123gh6pm.h"
-
+#include "delay.h"
 #define RED 		(1U<<1)
 #define BLUE 		(1U<<2)
 #define GREEN 	(1U<<3)
-
-/* Prototype function */
-void delay(int time);
 
 int main()
 {
@@ -32,14 +29,4 @@ int main()
 		1 			1				1 			0
 	green		Blue		Red
 	*/
-}
-
-void delay(int time)
-{
-	int volatile delay;
-	delay = 0;
-	while(delay < time)
-	{
-		++delay;
-	}
 }
