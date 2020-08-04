@@ -1,4 +1,5 @@
-#include "tm4c123gh6pm.h"
+#include "TM4C123.h"                    // Device header
+
 #include "delay.h"
 
 #define RED 		(1U<<1)
@@ -7,16 +8,16 @@
 
 int main()
 {
-	SYSCTL_RCGCGPIO_R   = 	0x20U; 	// 0b 0000 0000 0000 0000 0000 0000 0010 0000 0x00000020 is equal to 0x20
-	GPIO_PORTF_DIR_R    = 	(RED|BLUE|GREEN);							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
-	GPIO_PORTF_DEN_R 		= 	(RED|BLUE|GREEN);							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
-	GPIO_PORTF_DATA_R 	|= 	GREEN;
+	SYSCTL -> RCGCGPIO   = 	0x20U; 	// 0b 0000 0000 0000 0000 0000 0000 0010 0000 0x00000020 is equal to 0x20
+	GPIOF -> DIR    = 	(RED|BLUE|GREEN);							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
+	GPIOF -> DEN 		= 	(RED|BLUE|GREEN);							// 0b 0000 0000 0000 0000 0000 0000 0000 1110 
+	GPIOF -> DATA 	|= 	GREEN;
 	
 	while(1)
 	{
-	GPIO_PORTF_DATA_R |= BLUE; // Enable bits
+	GPIOF -> DATA |= BLUE; // Enable bits
 	delay(1000000);
-	GPIO_PORTF_DATA_R  &= (~BLUE); // Disable bits
+	GPIOF -> DATA  &= (~BLUE); // Disable bits
 	delay(500000);
 	}
 

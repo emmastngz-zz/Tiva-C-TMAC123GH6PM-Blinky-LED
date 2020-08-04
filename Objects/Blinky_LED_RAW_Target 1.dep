@@ -1,9 +1,15 @@
 Dependencies for Project 'Blinky_LED_RAW', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x5F24C907)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I"C:\Users\TOSHIBA SATELLITE\Documents\Curso tiva-c\Proyectos\Blinky_with_Pt_Raw_Addresses\RTE"-I"C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123"-D__UVISION_VERSION="521" -D_RTE_ -DTM4C1230H6PM-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (tm4c123gh6pm.h)(0x56672089)
+F (.\main.c)(0x5F28BD34)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I"C:\Users\TOSHIBA SATELLITE\Documents\Curso tiva-c\Proyectos\Blinky_with_Pt_Raw_Addresses\RTE"-I"C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123"-D__UVISION_VERSION="521" -D_RTE_ -DTM4C1230H6PM-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F5566)
+I (C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C1230H6PM.h)(0x5510449C)
+I (C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F87F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x574EF4F6)
+I (C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F87F2)
+I (C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83BD92)
+I (C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8F87F2)
+I (C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F87F2)
+I (C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B74676)
 I (delay.h)(0x5F24C908)
-F (.\tm4c123gh6pm.h)(0x56672089)()
 F (.\delay.c)(0x5F24C55E)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I"C:\Users\TOSHIBA SATELLITE\Documents\Curso tiva-c\Proyectos\Blinky_with_Pt_Raw_Addresses\RTE"-I"C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"C:\Users\TOSHIBA SATELLITE\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123"-D__UVISION_VERSION="521" -D_RTE_ -DTM4C1230H6PM-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
 I (delay.h)(0x5F24C908)
 F (.\delay.h)(0x5F24C908)()
