@@ -385,11 +385,6 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>tm4c123gh6pm.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\tm4c123gh6pm.h</FilePath>
-            </File>
-            <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\delay.c</FilePath>
